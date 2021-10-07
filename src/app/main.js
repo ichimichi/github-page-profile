@@ -3,5 +3,5 @@ var root = document.getElementById("root");
 
 setTimeout(function () {
   splash.innerHTML = "";
-  root.style.visibility = "visible";
+  root.classList.remove("hidden");
 }, 5000);

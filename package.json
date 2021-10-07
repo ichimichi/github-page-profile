@@ -9,7 +9,7 @@
     "post-css": "postcss public/css/style.css -o public/css/style.css",
     "purge-css": "OUT_DIR=./public/build node post-build",
     "pack": "gulp pack-html && gulp pack-js && gulp pack-css && gulp pack-assets",
-    "build": "npm run compile-scss && npm run post-css && npm run pack && npm run purge-css"
+    "build": "npm run compile-scss && npm run post-css && npm run pack"
   },
   "keywords": [],
   "author": "",

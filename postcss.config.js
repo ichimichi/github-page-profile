@@ -1,6 +1,6 @@
 module.exports = {
   syntax: "postcss-scss",
-  purge: ["./src/public/**/*.html", "./src/public/**/*.js"],
+  purge: { enabled: true, content: ["./src/**/*.html", "./src/**/*.js"] },
   darkMode: "class", // or 'media' or 'class'
   theme: {
     extend: {},
