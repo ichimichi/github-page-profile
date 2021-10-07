@@ -1,0 +1,30 @@
+{
+  "name": "github-profile",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile-scss": "gulp css",
+    "post-css": "postcss public/css/style.css -o public/css/style.css",
+    "purge-css": "OUT_DIR=./public/build node post-build",
+    "pack": "gulp pack-html && gulp pack-js && gulp pack-css && gulp pack-assets",
+    "build": "npm run compile-scss && npm run post-css && npm run pack && npm run purge-css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.3.7",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-css-minify": "^0.9.2",
+    "gulp-minify": "^3.1.0",
+    "gulp-sass": "^5.0.0",
+    "postcss-cli": "^9.0.1",
+    "postcss-scss": "^4.0.1",
+    "purgecss": "^4.0.3",
+    "sass": "^1.42.1",
+    "tailwindcss": "^2.2.16"
+  }
+}
