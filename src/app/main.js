@@ -4,4 +4,4 @@ var root = document.getElementById("root");
 setTimeout(function () {
   splash.innerHTML = "";
   root.classList.remove("hidden");
-}, 5000);
+}, 3000);
