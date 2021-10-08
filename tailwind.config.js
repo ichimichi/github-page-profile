@@ -5,7 +5,16 @@ module.exports = {
     debugScreens: {
       position: ["top", "left"],
     },
-    extend: {},
+    extend: {
+      colors: {
+        primary: "#1a1a1a",
+        secondary: "#f4f4f4",
+        accent: "#f18983",
+        info: "#9fd037",
+        warn: "#f7cb00",
+        error: "#ff4444",
+      },
+    },
   },
   variants: {
     extend: {},
