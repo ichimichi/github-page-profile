@@ -29,6 +29,7 @@
     "purgecss": "^4.0.3",
     "sass": "^1.42.1",
     "tailwindcss": "^2.2.16",
+    "tailwindcss-debug-screens": "^2.1.0",
     "watch": "^1.0.2"
   }
 }
