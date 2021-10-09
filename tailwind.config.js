@@ -1,5 +1,5 @@
 module.exports = {
-    purge: { enabled: true, content: ['./src/**/*.html', './src/**/*.js'] },
+    // purge: { enabled: true, content: ['./src/**/*.html', './src/**/*.js'] },
     darkMode: 'class', // or 'media' or 'class'
     theme: {
         debugScreens: {

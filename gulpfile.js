@@ -4,21 +4,24 @@ var concat = require('gulp-concat');
 var minify = require('gulp-minify');
 var cssMinify = require('gulp-css-minify');
 const Importer = require('gulp-importer').default;
+const del = require('del');
 
 const importer = new Importer({
     encoding: 'utf-8', // Check the available encodings in the options
     dependencyOutput: 'dependant',
 });
 
-function buildStyles() {
+gulp.task('clean', function () {
+    return del(['public/**'], { force: true });
+});
+
+gulp.task('css', function () {
     return gulp
         .src('./src/scss/**/*.scss')
         .pipe(sass.sync().on('error', sass.logError))
         .pipe(importer.execute())
         .pipe(gulp.dest('./public/css'));
-}
-
-gulp.task('css', buildStyles);
+});
 
 gulp.task('pack-js', function () {
     return gulp
