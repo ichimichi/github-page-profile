@@ -4,15 +4,21 @@
 
 @layer base {
     h1 {
-        @apply mb-6 text-5xl;
+        @apply mb-6 text-4xl md:text-5xl;
     }
     h2 {
-        @apply mb-3 text-3xl;
+        @apply mb-3 text-2xl md:text-3xl;
     }
     h3 {
         @apply mb-2 text-2xl;
     }
     h4 {
         @apply mb-1 text-xl;
+    }
+}
+
+@layer components {
+    .button-primary {
+        @apply text-secondary bg-primary px-4 py-2 shadow-sm flex items-center justify-center hover:text-primary hover:bg-secondary hover:shadow-none transition;
     }
 }
