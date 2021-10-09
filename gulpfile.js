@@ -40,10 +40,7 @@ gulp.task('pack-css', function () {
 });
 
 gulp.task('pack-html', function () {
-    return gulp
-        .src(['src/index.html'])
-        .pipe(concat('index.html'))
-        .pipe(gulp.dest('public/build'));
+    return gulp.src(['src/*.html']).pipe(gulp.dest('public/build'));
 });
 
 gulp.task('pack-assets', function () {
