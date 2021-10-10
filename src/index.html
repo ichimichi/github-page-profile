@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" x-data="{dark:false}" x-bind:class="dark?'dark':''">
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -14,9 +14,23 @@
         <title>Ichimichi Laribok</title>
         <link rel="icon" type="image/svg+xml" href="favicon.svg" />
         <link rel="stylesheet" type="text/css" href="style.css" />
+        <script
+            defer
+            src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+        ></script>
     </head>
     <body class="debug-screens">
-        <div id="root" class="hidden">
+        <div
+            id="root"
+            class="
+                hidden
+                h-full
+                bg-fixed bg-white
+                md:bg-lightImage
+                dark:bg-primary
+                md:dark:bg-darkImage
+            "
+        >
             <div
                 class="
                     flex
@@ -31,6 +45,8 @@
                         md:border-2
                         bg-secondary
                         md:border-primary
+                        dark:bg-primary
+                        md:dark:border-secondary
                         w-full
                         md:w-1/2
                     "
@@ -42,6 +58,7 @@
                             text-center
                             bg-primary
                             text-white
+                            dark:bg-secondary dark:text-black
                             py-2
                             mb-4
                         "
@@ -80,7 +97,7 @@
                         "
                     >
                         <a
-                            class="button-primary"
+                            class="btn btn-primary"
                             href="https://www.linkedin.com/in/laribok-syiemlieh-17944b213/"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -89,7 +106,7 @@
                             <span>LinkedIn</span>
                         </a>
                         <a
-                            class="button-primary"
+                            class="btn btn-primary"
                             href="https://github.com/ichimichi"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -98,7 +115,7 @@
                             <span>GitHub</span>
                         </a>
                         <a
-                            class="button-primary"
+                            class="btn btn-primary"
                             href="https://www.instagram.com/_.i.chi.mi.chi._/"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -107,7 +124,7 @@
                             <span>Instagram</span>
                         </a>
                         <a
-                            class="button-primary"
+                            class="btn btn-primary"
                             href="https://open.spotify.com/user/31ksmjglfmjazuxjzidxbazcmgke?si=4305aba70c934b32"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -115,6 +132,11 @@
                             <i class="fab fa-spotify mr-2"></i>
                             <span>Spotify</span>
                         </a>
+                        <button class="btn btn-primary" @click="dark=!dark">
+                            <i class="fas fa-adjust mr-2"></i>
+                            <span x-show="dark">Light Mode</span>
+                            <span x-show="!dark">Dark Mode</span>
+                        </button>
                     </div>
                 </div>
             </div>
